@@ -80,7 +80,7 @@ Several experiments are implemented on this benchmark dataset to demonstrate the
 ### Evaluation Metric
 
 <p align="center">
-<img width="400" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture10.png">
+<img width="300" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture10.png">
 </p>
 
 mIOU is a common evaluation metric for semantic image segmentation, which first computes the IOU for each semantic class and then computes the average over classes. 
