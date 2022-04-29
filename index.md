@@ -146,17 +146,19 @@ Besides, we have done a lot of survey on different loss functions. We not only u
 
 Here is a demo video that shows the semantic segmentation results in real time. 
 
+[![demo](https://youtu.be/6t9DUVu0zj4/0.jpg)](https://youtu.be/6t9DUVu0zj4)
+
 <p align="center">
 <iframe width="560" src="https://youtu.be/6t9DUVu0zj4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 ## Project Proposal
 
-[Link to the project proposal](https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/CS 766 project proposal.pdf)
+[Link to the project proposal]("https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/CS 766 project proposal.pdf")
 
 ## Midterm Report 
 
-[Link to the midterm report](https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/CS 766 mid-term progress report.pdf)
+[Link to the midterm report]("https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/CS 766 mid-term progress report.pdf")
 
 ## Project code repo
 
