@@ -14,8 +14,8 @@ The proposed model leverages both the TNT and the U-Net structures to achieve a 
 In addition, different loss functions are considered in the model formulation to improve the classification performance as well as tackle the data imbalance issue.
 
 <p align="left">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png">
+<img width="500" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
+<img width="500" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png">
 </p>
 
 ## Background
@@ -26,7 +26,7 @@ The fully convolutional network (FCN) with an encoder-decoder architecture has b
 However, one weakness of the pure convolution architecture is that the global context is unavoidably not well modeled. 
 
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png">
+<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png">
 </p>
 
 Recently, the new kind of neural architecture transformer, which can provide the relationships between different features based on self-attention mechanism, has been widely promoted as a powerful alternative for computer vision problems. 
@@ -42,7 +42,7 @@ Besides, the U-Net architecture, which decodes that up-samples features using tr
 ## Model Formulation
 
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture6.png">
+<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture6.png">
 </p>
 
 Because of the limitations of previous models, in this project, we propose a semantic Segmentation Model named TNTU-Net, which leverages the features of both TNT and U-Net.
@@ -59,8 +59,8 @@ Also we tried the combinations of different loss functions. For example, focal l
 ## Dataset
 
 <p align="left">
-<img width="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture7.png">
-<img width="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture8.png">
+<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture7.png">
+<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture8.png">
 </p>
 
 The dataset we worked on is from KITTI, which is a semantic segmentation benchmark dataset. 
@@ -79,7 +79,7 @@ We implemented experiments on this benchmark dataset to demonstrate the effectiv
 ### Evaluation Metric
 
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture10.png">
+<img width="200" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture10.png">
 </p>
 
 mIOU is a common evaluation metric for semantic image segmentation, which first computes the IOU for each semantic class and then computes the average over classes. 
@@ -89,7 +89,7 @@ IOU = true_positive / (true_positive + false_positive + false_negative)
 ### Evaluation Results
 
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture11.png">
+<img width="1000" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture11.png">
 </p>
 
 <p align="center">
@@ -110,7 +110,7 @@ The following figures above show the prediction details of the final model.
 
 The mean IOU curve:
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture14.png">
+<img width="400" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture14.png">
 </p>
 
 The segmentation results (raw, actual annotation, predicted annotation):
@@ -144,10 +144,11 @@ Besides, we have done a lot of survey on different loss functions. We not only u
 
 ## Demo
 
+Here is a demo video that shows the semantic segmentation results in real time. 
+
 <p align="center">
 <iframe width="560" height="315" src="https://youtu.be/6t9DUVu0zj4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
-
 
 ## Project Proposal
 
