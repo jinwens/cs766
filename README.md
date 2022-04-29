@@ -1,2 +1,2 @@
-# cs766project
-https://cmilica.github.io/cs766project/
+# CS766 project webpage
+https://jinwens.github.io/cs766/
