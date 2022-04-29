@@ -146,8 +146,9 @@ Besides, we have done a lot of survey on different loss functions. We not only u
 
 Here is a demo video that shows the semantic segmentation results in real time. 
 
+<p align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6t9DUVu0zj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</p>
 
 ## Project Proposal
 
@@ -157,7 +158,7 @@ Here is a demo video that shows the semantic segmentation results in real time.
 
 [Midterm report](https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/cs766_midterm_report.pdf)
 
-## Project code repo
+## Project Code Repo
 
 (To be updated)
 
