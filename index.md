@@ -26,7 +26,7 @@ The fully convolutional network (FCN) with an encoder-decoder architecture has b
 However, one weakness of the pure convolution architecture is that the global context is unavoidably not well modeled. 
 
 <p align="center">
-<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png">
+<img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png">
 </p>
 
 Recently, the new kind of neural architecture transformer, which can provide the relationships between different features based on self-attention mechanism, has been widely promoted as a powerful alternative for computer vision problems. 
@@ -34,7 +34,7 @@ Transformer-in-transformer which called TNT is an evolution of transformer. Typi
 Specifically, Han et. al proposed the Transformer-iN-Transformer network architecture which takes into account the attention inside the local patches of images and achieved better accuracy on the ImageNet benchmark. 
 
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture5.png">
+<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture5.png">
 </p>
 
 Besides, the U-Net architecture, which decodes that up-samples features using transposed convolution corresponding to each downsampling stage, presented good performance for medical image segmentation tasks. The symmetric expanding path uses CNN module and up convolutional module to do the up sampling until the features become almost the same size as input. It is powerful to capture global context information.
@@ -73,7 +73,7 @@ We implemented experiments on this benchmark dataset to demonstrate the effectiv
 ### TNTU-Net Configuration for Training
 
 <p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture9.png">
+<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture9.png">
 </p>
 
 ### Evaluation Metric
@@ -92,10 +92,6 @@ IOU = true_positive / (true_positive + false_positive + false_negative)
 <img width="1000" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture11.png">
 </p>
 
-<p align="center">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture12.png">
-</p>
-
 At first, we trained the model with BCE loss, Focal loss, and Dice Loss function. 
 It turned out that the model with dice loss had the best performance. 
 Then, we tried to improve the model performance by using different combinations of loss functions.
@@ -103,6 +99,10 @@ The results indicated that the predictions of the model with BCE loss function h
 And the model with dice loss had the best performance so far. 
 Thus, we combine BCE loss function and dice loss to train the final model. 
 In the end, we get the best model performance with mean IOU of 61.23.
+
+<p align="center">
+<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture12.png">
+</p>
 
 ### Result Details of the Final Model
 
