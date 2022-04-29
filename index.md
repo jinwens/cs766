@@ -150,10 +150,6 @@ Here is a demo video that shows the semantic segmentation results in real time.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6t9DUVu0zj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iari7YP6ovI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
-
 ## Project Proposal
 
 [Project proposal](https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/cs766_proposal.pdf)
