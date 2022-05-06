@@ -14,8 +14,8 @@ The proposed model leverages both the TNT and the U-Net structures to achieve a 
 In addition, different loss functions are considered in the model formulation to improve the classification performance as well as tackle the data imbalance issue.
 
 <p align="left">
-<img width="500" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
-<img width="500" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png">
+<img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
+<img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png">
 </p>
 
 ## Background
@@ -29,20 +29,20 @@ However, one weakness of the pure convolution architecture is that the global co
 <img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png">
 </p>
 
-Recently, the new kind of neural architecture transformer, which can provide the relationships between different features based on self-attention mechanism, has been widely promoted as a powerful alternative for computer vision problems. 
+Recently, the new kind of neural architecture transformer [1], which can provide the relationships between different features based on self-attention mechanism, has been widely promoted as a powerful alternative for computer vision problems. 
 Transformer-in-transformer, which is called TNT, is an evolution of transformer. Typically, TNT conducts the same process as transformer, but it does twice to get more powerful local features.
-Specifically, Han et. al proposed the Transformer-iN-Transformer network architecture which takes into account the attention inside the local patches of images and achieved better accuracy on the ImageNet benchmark. 
+Specifically, Han et. al proposed the Transformer-iN-Transformer network architecture which takes into account the attention inside the local patches of images and achieved better accuracy on the ImageNet benchmark [2]. 
 
 <p align="center">
-<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture5.png">
+<img width="700" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture5.png">
 </p>
 
-Besides, the U-Net architecture, which decodes that up-samples features using transposed convolution corresponding to each downsampling stage, presented a good performance for medical image segmentation tasks. The symmetric expanding path uses CNN module and up convolutional module to do the upsampling until the features become almost the same size as the input. It is powerful to capture global context information.
+Besides, the U-Net architecture, which decodes that up-samples features using transposed convolution corresponding to each downsampling stage, presented a good performance for medical image segmentation tasks [3]. The symmetric expanding path uses CNN module and up convolutional module to do the upsampling until the features become almost the same size as the input. It is powerful to capture global context information.
 
 ## Model Formulation
 
 <p align="center">
-<img width="800" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture6.png">
+<img width="700" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture6.png">
 </p>
 
 Because of the limitations of previous models, in this project, we propose a semantic Segmentation Model named TNTU-Net, which leverages the features of both TNT and U-Net.
@@ -53,18 +53,18 @@ Then the features are upsampled to the same size as the input.
 
 ### Loss Functions
 
-In this study, three types of loss functions are utilized to explore their influence on the model performance, i.e., binary cross entropy loss (BCEL), focal loss (FL) and dice loss (DL). They are commonly used in the semantic segmentation tasks. 
+In this study, three types of loss functions are utilized to explore their influence on the model performance, i.e., binary cross entropy loss (BCEL) [4], focal loss (FL) [5] and dice loss (DL) [6]. They are commonly used in the semantic segmentation tasks. 
 In addition, we tried the combinations of different loss functions. For example, the combination of focal loss and dice loss, the combination of binary cross entropy loss and dice loss, etc.
 
 
 ## Dataset
 
 <p align="left">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture7.png">
-<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture8.png">
+<img width="400" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture7.png">
+<img width="400" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture8.png">
 </p>
 
-The dataset we worked on is from KITTI, which is a semantic segmentation benchmark dataset. 
+The dataset we worked on is from KITTI, which is a semantic segmentation benchmark dataset [7]. 
 It consists of 200 semantically annotated training as well as 200 testing images. 
 And there are 11 categories/labels for the image, including building, tree, sky, car, sign, road, pedestrian, fence, pole, sidewalk, and bicyclist.
 Several experiments are implemented on this benchmark dataset to demonstrate the effectiveness of the proposed TNTU-Net architecture.
@@ -74,7 +74,7 @@ Several experiments are implemented on this benchmark dataset to demonstrate the
 ### TNTU-Net Configuration for Training
 
 <p align="center">
-<img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture9.png">
+<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture9.png">
 </p>
 
 ### Evaluation Metric
@@ -90,7 +90,7 @@ IOU = true_positive / (true_positive + false_positive + false_negative)
 ### Evaluation Results
 
 <p align="center">
-<img width="1000" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture11.png">
+<img width="900" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture11.png">
 </p>
 
 In the first step, the models are trained with BCE loss, Focal loss, and Dice Loss function, respectively.
@@ -102,7 +102,7 @@ Thus, the combination of BCE loss function and dice loss is selected to train th
 In the end, we get the best model performance with mean IOU of 61.23 from the final model.
 
 <p align="center">
-<img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture12.png">
+<img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture12.png">
 </p>
 
 ### Result Details of the Final Model
@@ -153,24 +153,32 @@ Here is a demo video that shows the semantic segmentation results in real-time.
 
 ## Project Proposal
 
-[Project proposal](https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/cs766_proposal.pdf)
+[Project proposal](https://drive.google.com/file/d/1Bn44fIkn_xJ2dgdV8bOTgAaLKKNUmKxU/view?usp=sharing)
 
 ## Midterm Report 
 
-[Midterm report](https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/cs766_midterm_report.pdf)
+[Midterm report](https://drive.google.com/file/d/1eICf6pAqs9KhQdy1zbiArRsIGMmDTv1K/view?usp=sharing)
 
 ## Project Code Repo
 
-(To be updated)
+[Link](https://github.com/existentmember7/TNTUNet)
 
 ## Project Timeline
 
 | When                 | Task                                               | 
 |:---------------------|:---------------------------------------------------|
 | Feb 24               | Project Proposal                                   | 
-| Feb 25 - Mar 10      | Proposed model construction and evaluation         | 
-| Mar 11- Mar 20       | Model improvement considering data imbalance issue |
-| Mar 21- Apr 6        | Project mid-term report                            | 
-| Apr 7 - Apr 21       | Model fine-tuning and evaluation. Comparison with benchmark models | 
-| Before May 5         | Final write-up, presentation preparation, website construction     | 
+| Feb 25 - Mar 20      | Proposed model construction and evaluation         | 
+| Mar 20 - Apr 4       | Model improvement considering data imbalance issue |
+| Apr 5                | Project mid-term report                            | 
+| Apr 5 - Apr 22       | Model fine-tuning and evaluation. Comparison with benchmark models | 
+| Apr 22 - May 5       | Final write-up, presentation preparation, website construction     | 
 
+## Reference
+[1] Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., ... & Houlsby, N. (2020). An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929.
+[2] Han, K., Xiao, A., Wu, E., Guo, J., Xu, C., & Wang, Y. (2021). Transformer in transformer. Advances in Neural Information Processing Systems, 34.
+[3] Ronneberger, O., Fischer, P., & Brox, T. (2015, October). U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
+[4] Murphy, K. P. (2012). Machine learning: a probabilistic perspective. MIT press.
+[5] Dice, L. R. (1945). Measures of the amount of ecologic association between species. Ecology, 26(3), 297-302.
+[6] Lin, T. Y., Goyal, P., Girshick, R., He, K., & Dollár, P. (2017). Focal loss for dense object detection. In Proceedings of the IEEE international conference on computer vision (pp. 2980-2988).
+[7] Abu Alhaija, H., Mustikovela, S. K., Mescheder, L., Geiger, A., & Rother, C. (2018). Augmented reality meets computer vision: Efficient data generation for urban driving scenes. International Journal of Computer Vision, 126(9), 961-972.
