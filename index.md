@@ -16,7 +16,8 @@ In addition, different loss functions are considered in the model formulation to
 <p align="center">
 <img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
 <img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png">
-<em>Application of Semantic Segmentation</em>
+
+  <em>Application of Semantic Segmentation</em>
 </p>
 
 ## Background
@@ -25,11 +26,12 @@ Semantic segmentation is an important research direction in the field of compute
 Traditional machine learning and computer vision techniques have been utilized to address such problems in the past, but with the emergence of deep learning, especially Convolutional Neural Network (CNN), the accuracy and efficiency of the approach has increased exponentially. 
 The fully convolutional network (FCN) with an encoder-decoder architecture has been the popular paradigm for semantic segmentation. 
 However, one weakness of the pure convolution architecture is that the global context is unavoidably not well modeled. 
-
 <p align="center">
 <img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png">
+  
   <em>Sturcture of Transformer</em>
-</p>
+</p> 
+
 
 Recently, the new kind of neural architecture transformer [1], which can provide the relationships between different features based on self-attention mechanism, has been widely promoted as a powerful alternative for computer vision problems. 
 Transformer-in-transformer, which is called TNT, is an evolution of transformer. Typically, TNT conducts the same process as transformer, but it does twice to get more powerful local features.
