@@ -26,10 +26,14 @@ Traditional machine learning and computer vision techniques have been utilized t
 The fully convolutional network (FCN) with an encoder-decoder architecture has been the popular paradigm for semantic segmentation. 
 However, one weakness of the pure convolution architecture is that the global context is unavoidably not well modeled. 
 <p align="center">
-<img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png" "This is a Title">
+<img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png" >
   <em>Sturcture of Transformer</em>
 </p> 
 
+<figure>
+<img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png" >
+  <figcaption>Sturcture of Transformer</figcaption>
+</figure>
 
 Recently, the new kind of neural architecture transformer [1], which can provide the relationships between different features based on self-attention mechanism, has been widely promoted as a powerful alternative for computer vision problems. 
 Transformer-in-transformer, which is called TNT, is an evolution of transformer. Typically, TNT conducts the same process as transformer, but it does twice to get more powerful local features.
