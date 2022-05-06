@@ -80,7 +80,7 @@ Several experiments are implemented on this benchmark dataset to demonstrate the
 
 <p align="center">
 <img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture9.png">
-  <center><em>Configuration for Training</em></center>
+  <center><em>Training Configuration</em></center>
 </p>
 
 ### Evaluation Metric
