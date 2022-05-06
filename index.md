@@ -136,7 +136,7 @@ The confusion matrix of the classification results:
   <center><em>Confusion Matrix</em></center>
 </p>
 
-From the confusion matrix, it is noted that the proposed model mainly focuses on the big objects, such as the sky, building, road, sidewalk, grass, and car. And the performance of the model  classifying small objects, such as the fence, pole, sign, people, and cyclist. This could be caused by the data imbalance issue.
+From the confusion matrix, it is noted that the proposed model mainly focuses on the big objects, such as the sky, building, road, sidewalk, grass, and car. And the performance of the model is not that good when it comes to small objects, such as the fence, pole, sign, people, and cyclist. This could be caused by the data imbalance issue. We further split the dataset into the big-object dataset and the small-object dataset and retrained the models, however, the improvement was not significant.
 
 
 ## Discussion
