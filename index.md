@@ -15,7 +15,7 @@ In addition, different loss functions are considered in the model formulation to
 
 <p align="center">
 <img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
-<img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png" >
+<img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png" >\
   <em>Application of Semantic Segmentation</em>
 </p>
 
