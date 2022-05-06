@@ -16,6 +16,7 @@ In addition, different loss functions are considered in the model formulation to
 <p align="center">
 <img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
 <img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png" >
+  
   <em>Application of Semantic Segmentation</em>
 </p>
 
@@ -27,6 +28,7 @@ The fully convolutional network (FCN) with an encoder-decoder architecture has b
 However, one weakness of the pure convolution architecture is that the global context is unavoidably not well modeled. 
 <p align="center">
 <img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png" >
+  
   <em>Sturcture of Transformer</em>
 </p> 
 
