@@ -17,9 +17,7 @@ In addition, different loss functions are considered in the model formulation to
 <img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture1.png">
 <img width="400" height="250" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture2.png" >
   <center><em>Application of Semantic Segmentation</em></center>
-  <em>Application of Semantic Segmentation</em>
 </p>
-<center>This is an image</center>
 
 ## Background
 
@@ -27,16 +25,11 @@ Semantic segmentation is an important research direction in the field of compute
 Traditional machine learning and computer vision techniques have been utilized to address such problems in the past, but with the emergence of deep learning, especially Convolutional Neural Network (CNN), the accuracy and efficiency of the approach has increased exponentially. 
 The fully convolutional network (FCN) with an encoder-decoder architecture has been the popular paradigm for semantic segmentation. 
 However, one weakness of the pure convolution architecture is that the global context is unavoidably not well modeled. 
+
 <p align="center">
 <img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png" >
-  
-  <em>Sturcture of Transformer</em>
+  <center><em>Sturcture of Transformer</em></center>
 </p> 
-
-<figure>
-<img width="600" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture3.png" >
-  <figcaption>Sturcture of Transformer</figcaption>
-</figure>
 
 Recently, the new kind of neural architecture transformer [1], which can provide the relationships between different features based on self-attention mechanism, has been widely promoted as a powerful alternative for computer vision problems. 
 Transformer-in-transformer, which is called TNT, is an evolution of transformer. Typically, TNT conducts the same process as transformer, but it does twice to get more powerful local features.
@@ -44,7 +37,7 @@ Specifically, Han et. al proposed the Transformer-iN-Transformer network archite
 
 <p align="center">
 <img width="700" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture5.png">
-  <figcaption>Sturcture of U-Net</figcaption>
+  <center><em>Sturcture of U-Net</em></center>
 </p>
 
 Besides, the U-Net architecture, which decodes that up-samples features using transposed convolution corresponding to each downsampling stage, presented a good performance for medical image segmentation tasks [3]. The symmetric expanding path uses CNN module and up convolutional module to do the upsampling until the features become almost the same size as the input. It is powerful to capture global context information.
@@ -53,7 +46,7 @@ Besides, the U-Net architecture, which decodes that up-samples features using tr
 
 <p align="center">
 <img width="700" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture6.png">
-  <figcaption>Proposed Model Structure</figcaption>
+  <center><em>Proposed Model Structure</em></center>
 </p>
 
 Because of the limitations of previous models, in this project, we propose a semantic Segmentation Model named TNTU-Net, which leverages the features of both TNT and U-Net.
@@ -73,7 +66,7 @@ In addition, we tried the combinations of different loss functions. For example,
 <p align="center">
 <img width="400" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture7.png">
 <img width="400" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture8.png">
-  <figcaption>Sample Image and the Corresponding Annotation</figcaption>
+  <center><em>Sample Image and the Corresponding Annotation</em></center>
 </p>
 
 The dataset we worked on is from KITTI, which is a semantic segmentation benchmark dataset [7]. 
@@ -87,14 +80,14 @@ Several experiments are implemented on this benchmark dataset to demonstrate the
 
 <p align="center">
 <img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture9.png">
-  <figcaption>Configuration for Training</figcaption>
+  <center><em>Configuration for Training</em></center>
 </p>
 
 ### Evaluation Metric
 
 <p align="center">
 <img width="300" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture10.png">
-  <figcaption>Description of mIOU</figcaption>
+  <center><em>Description of mIOU</em></center>
 </p>
 
 mIOU is a common evaluation metric for semantic image segmentation, which first computes the IOU for each semantic class and then computes the average over classes. 
@@ -105,7 +98,7 @@ IOU = true_positive / (true_positive + false_positive + false_negative)
 
 <p align="center">
 <img width="900" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture11.png">
-  <figcaption>Segmentation Results for A Sample Image</figcaption>
+  <center><em>Segmentation Results for A Sample Image</em></center>
 </p>
 
 In the first step, the models are trained with BCE loss, Focal loss, and Dice Loss function, respectively.
@@ -118,7 +111,7 @@ In the end, we get the best model performance with mean IOU of 61.23 from the fi
 
 <p align="center">
 <img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture12.png">
-  <figcaption>Evaluation Results</figcaption>
+  <center><em>Evaluation Results</em></center>
 </p>
 
 ### Result Details of the Final Model
@@ -128,19 +121,19 @@ The following figures above show the prediction details of the final model.
 The mean IOU curve:
 <p align="center">
 <img width="400" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture14.png">
-  <figcaption>Mean IOU Curve</figcaption>
+  <center><em>Mean IOU Curve</em></center>
 </p>
 
 The segmentation results (raw, actual annotation, predicted annotation):
 <p align="center">
 <img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture13.png">
-  <figcaption>Segmentation Results</figcaption>
+  <center><em>Segmentation Results</em></center>
 </p>
 
 The confusion matrix of the classification results:
 <p align="center">
 <img width="500" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture15.png">
-  <figcaption>Confusion Matrix</figcaption>
+  <center><em>Confusion Matrix</em></center>
 </p>
 
 From the confusion matrix, it is noted that the proposed model mainly focuses on the big objects, such as the sky, building, road, sidewalk, grass, and car. And the performance of the model  classifying small objects, such as the fence, pole, sign, people, and cyclist. This could be caused by the data imbalance issue.
@@ -150,7 +143,7 @@ From the confusion matrix, it is noted that the proposed model mainly focuses on
 
 <p align="center">
 <img width="700" src="https://raw.githubusercontent.com/jinwens/cs766/gh-pages/assets/Picture19.png">
-  <figcaption>Leaderboard Results</figcaption>
+  <center><em>Leaderboard Results</em></center>
 </p>
 
 We also compare our results with the benchmark models on the leaderboard as shown above. 
